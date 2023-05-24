@@ -33,13 +33,14 @@ main {
 
 .slider_container {
     width: 100%;
-    background-color: #7678ED;
-    border: 3px solid #3D348B;
-    border-radius: 5px;
+    background: linear-gradient(45deg, #3D348B 50%, #7678ed);
+    /* border: 3px solid #f35b04; */
+    border-radius: 10px;
     position: relative;
     display: grid;
     grid-template-columns: 80px 1fr 80px;
     padding: 30px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.7);
 }
 
 .btn-direction{
@@ -48,7 +49,7 @@ main {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border:1px solid #F35B04;
+    border:2px solid #F35B04;
     background: transparent;
     cursor: pointer;
     font-size: 25px;
@@ -57,6 +58,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #f1f1f1
 }
 
 .left {
@@ -69,6 +71,7 @@ main {
 
 .slide_container {
     grid-area: 2 / 2 / 3 / 3;
+    display: none;
 }
 
 .slide_container.active {
@@ -83,6 +86,8 @@ main {
 .content img {
     max-width: 100%;
     vertical-align: bottom;
+    border: 2px dashed black;
+    border-radius: 5px;
 }
 
 .content::before{
@@ -111,6 +116,7 @@ main {
     padding: 30px;
     font-size: 20px;
     color: #fff;
+    display: none;
 } 
 
 .project_id h2 {
