@@ -1,7 +1,7 @@
 /* ---------- HEADER ---------- */
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 70px;
     background-color: #7678ED;
 }
@@ -86,7 +86,6 @@ main {
 .content img {
     max-width: 100%;
     vertical-align: bottom;
-    border: 2px dashed black;
     border-radius: 5px;
 }
 
@@ -94,7 +93,7 @@ main {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(10,10,10,0.5);
+    background-color: rgba(10,10,10,0.65);
     position: absolute;
     top: 0;
     left: 0;
@@ -119,15 +118,77 @@ main {
     display: none;
 } 
 
-.project_id h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 5px;
-    text-decoration: underline;
+.project_id p {
+    margin-bottom: 10px;
 }
 
-.project_id button {
-    display: block;
-    margin: 15px auto;
+.project_id h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.project_id h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+
+.project_id_techno, .projetc_id_desc {
+    margin-bottom: 10px;
+}
+
+.container_img_techno {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.project_id_techno img {
+    width: 50px;
+    border: 2px solid black;
+    margin-right: 10px;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.git_btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #000;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.git_btn:hover{
+    background-color: #a5a5a5;
+}
+
+.git_btn img {
+    width: 100%;
+}
+
+.link_btn {
+    height: 50px;
+    font-size: 18px;
     padding: 10px 25px;
+    border: 2px solid black;
+    background-color: #F35B04;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link_btn a {
+    width: 100%;
+    background: red;
+}
+
+.link_btn:hover {
+    background-color: #fff;
+    border: 2px solid #F35B04;
+    color: #3D348B;
 }
