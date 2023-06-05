@@ -1,194 +1,199 @@
-/* ---------- HEADER ---------- */
+/* ----------- VARIABLE ---------- */
 
-header {
-    width: 100vw;
-    height: 70px;
-    background-color: #7678ED;
+:root {
+    --main-bg-color: #BCEBCB;
+    --text-color: #22031F;
+    --main-violet:#9061F2;
+    --main-orange: #F68E5F;
 }
+
+
+/* ----------- GENERAL ---------- */
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right bottom, #fff 40%, var(--main-bg-color));
+    color: var(--text-color);
+}
+
+/* ----------- HEADER ---------- */
 
 .main_title {
-    font-size: 55px;
     text-align: center;
-    line-height: 70px;
-    border-bottom: 3px solid #F35B04;
+    font-size: 60px;
+    padding: 20px;
 }
 
-
-/* ---------- MAIN ---------- */
-
-main {
-    width:1200px;
-    margin: 100px auto;
+.nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 20px auto;
 }
 
-.text_par {
-    font-size: 28px;
-    text-align: center;
-    margin-top: 20px;
+.nav_item {
+    margin-right: 25px;
 }
 
-.slider_section{
-    margin-top: 100px;
-}
-
-.slider_container {
-    width: 100%;
-    background: linear-gradient(45deg, #3D348B 50%, #7678ed);
-    /* border: 3px solid #f35b04; */
-    border-radius: 10px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 80px 1fr 80px;
-    padding: 30px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.7);
-}
-
-.btn-direction{
-    position: absolute;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border:2px solid #F35B04;
-    background: transparent;
-    cursor: pointer;
+.nav_link {
+    display: block;
     font-size: 25px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bolder;
+}
+
+/* ----------- MAIN ---------- */
+
+.presentation {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.presentation_img{
+    border: 5px solid var(--main-violet);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 55px auto;
+}
+
+.presentation_img img {
+    width: 100%;
+    display: block;
+}
+
+.presentation_txt {
+    font-size: 28px;
+    line-height: 56px;
+    border: 3px solid var(--text-color);
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+.presentation_txt span {
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.presentation_btn {
+    display: block;
+    margin: 25px auto;
+    font-size: 36px;
+    background: var(--main-bg-color);
+    padding: 15px 25px;
+    border: 3px solid var(--main-orange);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 4px 5px 0 black;
+}
+
+.presentation_btn:hover {
+    background: var(--main-orange);
+    border: 3px solid var(--main-bg-color);
+}
+
+.presentation_btn:active{
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px black;
+}
+
+
+/* ----------- SLIDER ---------- */
+
+
+.slider_container{
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+
+.slide_btn {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    font-size: 200px;
+    z-index: 100;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #f1f1f1
+    border: 1px solid black;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
 }
+
+.slide_btn:hover {
+    background: rgba(255,255,255,0.10);
+}
+
+.slide_btn img {
+    width: 100%;
+}
+
 
 .left {
-    left: 3%;
+    left: 2%
 }
 
-.right{
-    right: 3%;
+.right {
+    right: 2%;
+
 }
 
-.slide_container {
-    grid-area: 2 / 2 / 3 / 3;
-    display: none;
-}
-
-.slide_container.active {
-    display: flex;
-}
-
-.content {
+.slider_container picture img {
     width: 100%;
-    position: relative;
 }
 
-.content img {
-    max-width: 100%;
-    vertical-align: bottom;
-    border-radius: 5px;
-}
-
-.content::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10,10,10,0.65);
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-} 
-
-.content:hover::before, .content:hover .project_id {
+.slide.active {
     display: block;
 }
 
-.project_id {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    /* display: none; */
-    border: 3px solid #F35B04;
-    border-radius: 15px 0 55px 0;
-    padding: 30px;
-    font-size: 20px;
-    color: #fff;
-    display: none;
-} 
+.slide {
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+}
 
-.project_id p {
-    margin-bottom: 10px;
+.slide {
+    display: none;
+}
+
+.project_id {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .project_id h2 {
-    font-size: 32px;
+    font-size: 28px;
+}
+.project_id p {
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 5px;
+    margin-top: 25px;
 }
 
-.project_id h3 {
-    font-size: 24px;
-    margin-bottom: 5px;
+.img_techno_container{
+
 }
 
-
-.project_id_techno, .projetc_id_desc {
-    margin-bottom: 10px;
+.img_techno_container img {
+    width: 100px;
 }
 
-.container_img_techno {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-.project_id_techno img {
-    width: 50px;
-    border: 2px solid black;
-    margin-right: 10px;
-}
+.projects_link_container{
 
-.btn_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.git_btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: #000;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.git_btn:hover{
-    background-color: #a5a5a5;
-}
-
-.git_btn img {
-    width: 100%;
-}
-
-.link_btn {
-    height: 50px;
-    font-size: 18px;
-    padding: 10px 25px;
-    border: 2px solid black;
-    background-color: #F35B04;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.link_btn a {
-    width: 100%;
-    background: red;
-}
-
-.link_btn:hover {
-    background-color: #fff;
-    border: 2px solid #F35B04;
-    color: #3D348B;
 }

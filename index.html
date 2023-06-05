@@ -11,88 +11,121 @@
     <body>
         <header>
             <h1 class="main_title">DEVATTOM</h1>
+            <nav>
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">PortFolio</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
-            <section class="text_section">
-                <p class="text_par">
-                    Vous trouverez ici differents projets réalisés par mes
-                    soins.
-                </p>
-                <p class="text_par">
-                    Si vous êtes interessé par mon travail n'hésitez pas
-                    <a href="#" class="contact_link">à me contacter</a>
-                </p>
+            <section class="presentation">
+                <div class="presentation_img">
+                    <img src="images/id_img.jpg" alt="photo de moi en portrait">
+                </div>
+                <div class="presentation_txt">
+                    <p>Hi !</p>
+                    <p>My name is Thomas and I am an enthusiastic web developer.</p>
+                    <p>Here are some of my <span>projects</span></p>
+                    <p>Feel free to <a class="presentation_contact_link" href="#">contact me !</a></p>
+                </div>
+                <button class="presentation_btn">Discover My Projects</button>
             </section>
-
-            <section class="slider_section">
+            <section class="projects_slider">
                 <div class="slider_container">
-                    <button class="btn-direction left"><</button>
-                    <button class="btn-direction right">></button>
-                    <div class="slide_container slide1 active">
-                        <div class="content">
-                            <div class="project_id">
-                                <h2>Fiche d'identité :</h2>
-                                <p>Nom : Nom projet</p>
-                                <p>Technos :</p>
-                                <ul>
-                                    <li>techno 1</li>
-                                    <li>techno 2</li>
-                                    <li>techno 3</li>
-                                </ul>
-                                <p>Descriptif : Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam quo maxime tempore accusantium, laudantium officiis accusamus quaerat. Inventore aut consectetur ut ducimus totam perspiciatis libero molestiae fugit provident quam?</p><br>
-                                <p>GitHub : <a href="#">https://github.com</a></p>
-                                <button><a href="#">Découvrir</a></button>
+                    <button class="slide_btn left"><img src="images/icon_chevron_left.png" alt="icon de chevron"></button>
+                    <button class="slide_btn right"><img src="images/icon_chevron_right.png" alt="icon de chevron"></button>
+                    <div class="slide slide1 active">
+                        <picture>
+                            <source srcset="images/bikeFinder/homepage_bikeFinder_w600.png" media="(max-width:599px)">
+                            <source srcset="images/bikeFinder/homepage_bikeFinder_w1200.png" media="(min-width:601px)">
+                            <source srcset="images/bikeFinder/homepage_bikeFinder_w1900.png" media="(max-width:1201px)">
+                            <img src="images/bikeFinder/homepage_bikeFinder_w1900.png" alt="screenshot application BikeFinder">
+                        </picture>
+                        <div class="project_id">
+                            <h2>BikeFinder</h2>
+                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <div class="img_techno_container">
+                                <img src="images/logos/HTML5_Logo_128.png" alt="">
+                                <img src="images/logos/css.png" alt="">
+                                <img src="images/logos/angular.png" alt="">
                             </div>
-                            <img src="images/projet_test.jpg" alt="image du projet">
+                            <div class="projects_link_container">
+                                <img src="images/logos/github_black.png" alt="">
+                                <img src="images/logos/link.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="slide_container slide2">
-                        <div class="content">
-                            <div class="project_id">
-                                <h2 class="project_id_name">Pokedex App</h2>
-                                <div class="project_id_techno">
-                                    <h3>Technos :</h3>
-                                    <div class="container_img_techno">
-                                        <img src="images/logos/html.png" alt="logo html">
-                                        <img src="images/logos/css.png" alt="logo html">
-                                        <img src="images/logos/ts-logo-128.png" alt="logo html">
-                                        <img src="images/logos/angular.png" alt="logo html">
-                                    </div>
-                                </div>
-                                <div class="project_id_desc">
-                                    <h3>Descriptif : </h3>
-                                    <p>Application qui permet d'ajouter, modifier ou supprimer des pokemons. Crée uniquement pour explorer le framework Angular, les concepts restent basiques.</p>
-                                </div>
-                                <div class="btn_container">
-                                    <button class="git_btn"><img src="images/logos/github.png" alt="logo github"><a href="https://github.com/Devattom/ng-pokemon-app.git" target="_blank"></a></button>
-                                    <a href="https://ng-pokemon-app-25895.web.app" target="_blank"><button class="link_btn">Découvrir</button></a>
-                                </div>
+                    <div class="slide slide2">
+                        <picture>
+                            <source srcset="images/flight_handler/homepage_flight_handler_w600.jpg" media="(max-width:599px)">
+                            <source srcset="images/flight_handler/homepage_flight_handler_w1200.jpg" media="(min-width:601px)">
+                            <source srcset="images/flight_handler/homepage_flight_handler_ooking" media="(max-width:1201px)">
+                            <img src="images/flight_handler/homepage_bikeFinder_w1900.png" alt="screenshot application BikeFinder">
+                        </picture>
+                        <div class="project_id">
+                            <h2>Flight Handler</h2>
+                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <div class="img_techno_container">
+                                <img src="images/logos/HTML5_Logo_128.png" alt="">
+                                <img src="images/logos/css.png" alt="">
+                                <img src="images/logos/angular.png" alt="">
                             </div>
-                            <img src="images/screenshot_pokemon_app.png" alt="image du projet">
+                            <div class="projects_link_container">
+                                <img src="images/logos/github_black.png" alt="">
+                                <img src="images/logos/link.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="slide_container slide3">
-                        <div class="content">
-                            <div class="project_id">
-                                <h2>Fiche d'identité :</h2>
-                                <p>Nom : Nom projet</p>
-                                <p>Technos :</p>
-                                <ul>
-                                    <li>techno 1</li>
-                                    <li>techno 2</li>
-                                    <li>techno 3</li>
-                                </ul>
-                                <p>Descriptif : Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam quo maxime tempore accusantium, laudantium officiis accusamus quaerat. Inventore aut consectetur ut ducimus totam perspiciatis libero molestiae fugit provident quam?</p><br>
-                                <p>GitHub : <a href="#">https://github.com</a></p>
-                                <button><a href="#">Découvrir</a></button>
+                    <div class="slide slide3">
+                        <picture>
+                            <source srcset="images/booking/homepage_booking_w600.png" media="(max-width:599px)">
+                            <source srcset="images/booking/homepage_booking_w1200.png" media="(min-width:601px)">
+                            <source srcset="images/booking/homepage_booking_w1900.png" media="(max-width:1201px)">
+                            <img src="images/booking/homepage_booking_w1900.png" alt="screenshot application BikeFinder">
+                        </picture>
+                        <div class="project_id">
+                            <h2>Booking</h2>
+                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <div class="img_techno_container">
+                                <img src="images/logos/HTML5_Logo_128.png" alt="">
+                                <img src="images/logos/css.png" alt="">
+                                <img src="images/logos/angular.png" alt="">
                             </div>
-                            <img src="images/projet_test.jpg" alt="image du projet">
+                            <div class="projects_link_container">
+                                <img src="images/logos/github_black.png" alt="">
+                                <img src="images/logos/link.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide4">
+                        <picture>
+                            <source srcset="images/pokedex/homepage_pokemon_app_w600.png" media="(max-width:599px)">
+                            <source srcset="images/pokedex/homepage_pokemon_app_w1200.png" media="(min-width:601px)">
+                            <source srcset="images/pokedex/homepage_pokemon_app_w1900.png" media="(max-width:1201px)">
+                            <img src="images/Pokedex/homepage_pokemon_app_w1900.png" alt="screenshot application BikeFinder">
+                        </picture>
+                        <div class="project_id">
+                            <h2>Pokedex</h2>
+                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <div class="img_techno_container">
+                                <img src="images/logos/HTML5_Logo_128.png" alt="">
+                                <img src="images/logos/css.png" alt="">
+                                <img src="images/logos/angular.png" alt="">
+                            </div>
+                            <div class="projects_link_container">
+                                <img src="images/logos/github_black.png" alt="">
+                                <img src="images/logos/link.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+
+        
         <script src="scripts/script.js"></script>
     </body>
 </html>
