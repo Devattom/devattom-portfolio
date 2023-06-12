@@ -1,4 +1,4 @@
-const slides = [...document.querySelectorAll(".slide_container")];
+const slides = [...document.querySelectorAll(".slide")];
 
 const sliderData = {
     direction: 0,
@@ -6,7 +6,7 @@ const sliderData = {
     slideInIndex: 0
 }
 
-const directionButtons = [...document.querySelectorAll(".btn-direction")];
+const directionButtons = [...document.querySelectorAll(".slide_btn")];
 
 directionButtons.forEach(btn => btn.addEventListener("click", handleClick))
 
@@ -35,7 +35,7 @@ function slideOut(){
     slideAnimation({
         el : slides[sliderData.slideInIndex],
         props: {
-            display: "flex",
+            display: "block",
             transform: `translateX(${sliderData.direction < 0 ? "100%" : "-100%"})`,
             opacity: 0
         }
@@ -73,3 +73,143 @@ function slideAnimation(animationObject){
         animationObject.el.style[prop] = animationObject.props[prop]
     }
 }
+
+const header = document.querySelector('header');
+const projectBtn = document.querySelector('.project_btn');
+const presentationSection = document.querySelector('.presentation');
+const sliderSection = document.querySelector('.projects_slider');
+const projectId = [...document.querySelectorAll('.project_id')];
+const presentationImg = document.querySelector('.presentation_img');
+
+
+projectBtn.addEventListener('click', () => {
+    presentationSection.classList.add('animShrink');
+    header.classList.remove('transitionIn');
+    header.classList.add('transitionOut');
+    setTimeout(()=> {
+        presentationSection.style.display = 'none';
+        header.style.display = 'none';
+        header.style.opacity = '0';
+    }, 1800);
+
+    setTimeout(()=> {
+        sliderSection.classList.add('animGrow');
+    }, 2300);
+})
+
+const infoBtn = document.querySelector('.toggle_info');
+
+infoBtn.addEventListener('click', () => {
+    projectId[sliderData.slideInIndex].classList.toggle('active');
+
+    if(projectId[sliderData.slideInIndex].classList.contains('active')){
+        infoBtn.textContent = "-";
+        infoBtn.style.color = "#fff"
+    } else {
+        infoBtn.textContent = "+";
+        infoBtn.style.color = "#000";
+    }
+})
+
+const backHomeBtn = document.querySelector('.back_home');
+
+backHomeBtn.addEventListener('click', () => {
+    presentationSection.classList.remove('animShrink');
+    sliderSection.classList.remove('animGrow');
+    header.classList.remove('transitionOut');
+
+    sliderSection.classList.add('animShrink');
+    header.classList.add('transitionIn');
+    setTimeout(()=> {
+        sliderSection.style.display = 'none';
+        // header.style.opacity = '1';
+        header.style.display = 'block';
+    }, 1800);
+
+    setTimeout(()=> {
+        presentationSection.style.display = 'block';
+        presentationSection.classList.add('animGrow');
+    }, 2300);
+
+
+})
+
+const presentationContainer = document.querySelector('.presentation_txt');
+const text1 = document.querySelector('.presentation_txt1');
+const text2 = document.querySelector('.presentation_txt2');
+const text3 = document.querySelector('.presentation_txt3');
+const text4 = document.querySelector('.presentation_txt4');
+const spanContainer = document.querySelector('.span');
+const linkContainer = document.querySelector('.presentation_contact_link');
+
+let sentence1 = 'Hi !';
+let sentence2 = 'My name is Thomas and I am an enthusiastic web developer.';
+let sentence3 = 'Here are some of my ';
+let span = 'Projects';
+let sentence4 = 'Feel free to ';
+let link = 'Contact me !';
+
+
+function typePresentationText(text, index, container){
+    if(index < text.length) {
+            let speed = Math.trunc(Math.random() * 250) + 50;
+            setTimeout(() => {
+                container.innerHTML += text[index];
+                typePresentationText(text, index + 1, container)
+            }, speed);     
+        }   
+}
+
+
+function typePresentationSpan(text, index, container){
+    if(index < text.length) {
+        let speed = Math.trunc(Math.random() * 250) + 50;
+        setTimeout(() => {
+            container.innerHTML += `<span>${span[index]}</span>`;
+            typePresentationSpan(text, index + 1, container)
+        }, speed)
+    }
+}
+
+function typePresentationLink(text, index, container){
+    if(index < text.length) {
+        let speed = Math.trunc(Math.random() * 250) + 40;
+        setTimeout(() => {
+            container.innerHTML += `<a href='#'>${text[index]}</a>`;
+            typePresentationLink(text, index + 1, container)
+        }, speed)
+    }
+}
+
+
+setTimeout(() => {
+    typePresentationText(sentence1, 0, text1);
+}, 300);
+
+
+setTimeout(() => {
+    typePresentationText(sentence2, 0, text2);
+}, 1500);
+    
+
+const thirdType = setTimeout(() => {
+    typePresentationText(sentence3, 0, text3);
+}, 12300);
+
+const spanType = setTimeout(() => {
+    typePresentationSpan(span, 0 ,text3)
+}, 16000);
+
+
+
+const fourthType = setTimeout(() => {
+    typePresentationText(sentence4, 0, text4);
+}, 18000);
+
+const linkType = setTimeout(() => {
+    typePresentationLink(link, 0, text4);
+}, 21000);
+
+
+
+
