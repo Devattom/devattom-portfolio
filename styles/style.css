@@ -20,7 +20,6 @@ body{
 /* ----------- HEADER ---------- */
 
 header {
-    /* opacity: 1; */
     transition: opacity 1s;
 }
 
@@ -28,8 +27,19 @@ header.transitionOut {
     opacity: 0;
 }
 
-header.transitionIn {
-    opacity: 1;
+header.headerIn {
+    animation: 1.5s ease-in-out headerIn;
+}
+
+@keyframes headerIn {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .main_title {
@@ -74,12 +84,12 @@ main {
 }
 
 .presentation.animShrink {
-    animation: 2s ease shrinkRotate;
+    animation: 1.5s ease shrinkRotate;
 }
 
 .presentation.animGrow {
     display: block;
-    animation: 2s ease-in growRotate;
+    animation: 1.5s ease-in growRotate;
 }
 
 .presentation_txt {
@@ -141,7 +151,7 @@ main {
         opacity: 1;
     }
     100% {
-        transform: rotate(360deg) scale(0) ;
+        transform: rotate(360deg) scale(0) translateX(1550px) ;
         opacity: 0;
     }
 }
@@ -193,11 +203,11 @@ main {
 }
 
 .projects_slider.animShrink {
-    animation: 2s ease shrinkRotate;
+    animation: 1.5s ease shrinkRotate;
 }
 
 .projects_slider.animGrow {
-    animation: 2s ease-in growRotate;
+    animation: 1.5s ease-in growRotate;
 }
 
 .slider_container{

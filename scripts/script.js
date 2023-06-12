@@ -95,8 +95,7 @@ projectBtn.addEventListener('click', () => {
     setTimeout(()=> {
         presentationSection.style.display = 'none';
         header.style.display = 'none';
-        header.style.opacity = '0';
-    }, 1800);
+    }, 1400);
 
     setTimeout(()=> {
         sliderSection.style.display = 'block';
@@ -111,14 +110,14 @@ backHomeBtn.addEventListener('click', () => {
     presentationSection.classList.toggle('animShrink');
     sliderSection.classList.toggle('animGrow');
     header.classList.remove('transitionOut');
-
     sliderSection.classList.toggle('animShrink');
-    header.classList.add('transitionIn');
+    
+
     setTimeout(()=> {
-        sliderSection.style.display = 'none';
-        // header.style.opacity = '1';
         header.style.display = 'block';
-    }, 1800);
+        header.classList.add('headerIn');
+        sliderSection.style.display = 'none';
+    }, 1400);
 
     setTimeout(()=> {
         presentationSection.style.display = 'block';
