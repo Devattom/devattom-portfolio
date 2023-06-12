@@ -105,20 +105,6 @@ main {
     display: block;
 }
 
-.presentation_img.drop {
-    animation: 2s ease drop;
-}
-
-@keyframes drop {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(+800px);
-        opacity: 0;
-    }
-}
-
 .presentation_txt {
     font-size: 28px;
     line-height: 56px;
@@ -157,13 +143,11 @@ main {
     100% {
         transform: rotate(360deg) scale(0) ;
         opacity: 0;
-        display: none;
     }
 }
 
 @keyframes growRotate {
     0% {
-        display: block;
         transform: rotate(0) scale(0);
         opacity: 0;
     }
@@ -209,12 +193,10 @@ main {
 }
 
 .projects_slider.animShrink {
-    display: block;
     animation: 2s ease shrinkRotate;
 }
 
 .projects_slider.animGrow {
-    display: block;
     animation: 2s ease-in growRotate;
 }
 

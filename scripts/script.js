@@ -83,7 +83,13 @@ const presentationImg = document.querySelector('.presentation_img');
 
 
 projectBtn.addEventListener('click', () => {
-    presentationSection.classList.add('animShrink');
+    if(presentationSection.classList.contains('animGrow')){
+        presentationSection.classList.remove('animGrow');
+    }
+    if(sliderSection.classList.contains('animShrink')){
+        sliderSection.classList.remove('animShrink');
+    }
+    presentationSection.classList.toggle('animShrink');
     header.classList.remove('transitionIn');
     header.classList.add('transitionOut');
     setTimeout(()=> {
@@ -93,9 +99,32 @@ projectBtn.addEventListener('click', () => {
     }, 1800);
 
     setTimeout(()=> {
-        sliderSection.classList.add('animGrow');
+        sliderSection.style.display = 'block';
+        sliderSection.classList.toggle('animGrow');
     }, 2300);
-})
+});
+
+const backHomeBtn = document.querySelector('.back_home');
+
+backHomeBtn.addEventListener('click', () => {
+    
+    presentationSection.classList.toggle('animShrink');
+    sliderSection.classList.toggle('animGrow');
+    header.classList.remove('transitionOut');
+
+    sliderSection.classList.toggle('animShrink');
+    header.classList.add('transitionIn');
+    setTimeout(()=> {
+        sliderSection.style.display = 'none';
+        // header.style.opacity = '1';
+        header.style.display = 'block';
+    }, 1800);
+
+    setTimeout(()=> {
+        presentationSection.style.display = 'block';
+        presentationSection.classList.toggle('animGrow');
+    }, 2300);
+});
 
 const infoBtn = document.querySelector('.toggle_info');
 
@@ -111,28 +140,7 @@ infoBtn.addEventListener('click', () => {
     }
 })
 
-const backHomeBtn = document.querySelector('.back_home');
 
-backHomeBtn.addEventListener('click', () => {
-    presentationSection.classList.remove('animShrink');
-    sliderSection.classList.remove('animGrow');
-    header.classList.remove('transitionOut');
-
-    sliderSection.classList.add('animShrink');
-    header.classList.add('transitionIn');
-    setTimeout(()=> {
-        sliderSection.style.display = 'none';
-        // header.style.opacity = '1';
-        header.style.display = 'block';
-    }, 1800);
-
-    setTimeout(()=> {
-        presentationSection.style.display = 'block';
-        presentationSection.classList.add('animGrow');
-    }, 2300);
-
-
-})
 
 const presentationContainer = document.querySelector('.presentation_txt');
 const text1 = document.querySelector('.presentation_txt1');
