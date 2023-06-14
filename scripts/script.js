@@ -133,12 +133,11 @@ infoBtn.addEventListener('click', () => {
         infoBtn.style.backgroundColor = "#F68E5F"
         directionButtons.forEach(btn => {
             btn.setAttribute('disabled', '');
-            // btn.style.backgroundColor = 'rgba(255,255,255,0.5)';
             btn.style.cursor = 'not-allowed';
         })
     } else {
         logoInfoBtn.src = 'images/plus.png';
-        infoBtn.style.backgroundColor = "transparent";
+        infoBtn.style.backgroundColor = "#BCEBCB";
         directionButtons.forEach(btn => {
             btn.removeAttribute('disabled');
             btn.style.cursor = 'pointer';

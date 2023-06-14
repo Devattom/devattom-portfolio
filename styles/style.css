@@ -1,7 +1,7 @@
 /* ----------------- VARIABLE ---------------- */
 
 :root {
-    --main-bg-color: #BCEBCB;
+    --main-green: #BCEBCB;
     --text-color: #22031F;
     --main-violet:#9061F2;
     --main-orange: #F68E5F;
@@ -192,7 +192,7 @@ main {
 
 .project_btn:hover {
     background: var(--main-orange);
-    border: 3px solid var(--main-bg-color);
+    border: 3px solid var(--main-green);
 }
 
 .project_btn:active{
@@ -238,7 +238,7 @@ main {
     align-items: center;
     border: 1px solid black;
     border-radius: 50%;
-    background: transparent;
+    background-color: rgba(255, 255, 255, 0.30);
     cursor: pointer;
 }
 
@@ -255,7 +255,7 @@ main {
     align-items: center;
     border: 1px solid black;
     border-radius: 50%;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-green);
     cursor: pointer;
 }
 
@@ -302,7 +302,7 @@ main {
     align-items: center;
     border: 1px solid black;
     border-radius: 50%;
-    background: var(--main-bg-color);
+    background: var(--main-green);
     cursor: pointer;
 }
 
