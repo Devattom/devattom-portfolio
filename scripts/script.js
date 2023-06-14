@@ -100,19 +100,16 @@ projectBtn.addEventListener('click', () => {
     setTimeout(()=> {
         sliderSection.style.display = 'block';
         sliderSection.classList.toggle('animGrow');
-    }, 2300);
+    }, 1450);
 });
 
 const backHomeBtn = document.querySelector('.back_home');
 
 backHomeBtn.addEventListener('click', () => {
-    
     presentationSection.classList.toggle('animShrink');
     sliderSection.classList.toggle('animGrow');
     header.classList.remove('transitionOut');
     sliderSection.classList.toggle('animShrink');
-    
-
     setTimeout(()=> {
         header.style.display = 'block';
         header.classList.add('headerIn');
@@ -122,20 +119,30 @@ backHomeBtn.addEventListener('click', () => {
     setTimeout(()=> {
         presentationSection.style.display = 'block';
         presentationSection.classList.toggle('animGrow');
-    }, 2300);
+    }, 1450);
 });
 
 const infoBtn = document.querySelector('.toggle_info');
+const logoInfoBtn = document.querySelector('.toggle_info img');
 
 infoBtn.addEventListener('click', () => {
     projectId[sliderData.slideInIndex].classList.toggle('active');
 
     if(projectId[sliderData.slideInIndex].classList.contains('active')){
-        infoBtn.textContent = "-";
-        infoBtn.style.color = "#fff"
+        logoInfoBtn.src = 'images/moins.png';
+        infoBtn.style.backgroundColor = "#F68E5F"
+        directionButtons.forEach(btn => {
+            btn.setAttribute('disabled', '');
+            // btn.style.backgroundColor = 'rgba(255,255,255,0.5)';
+            btn.style.cursor = 'not-allowed';
+        })
     } else {
-        infoBtn.textContent = "+";
-        infoBtn.style.color = "#000";
+        logoInfoBtn.src = 'images/plus.png';
+        infoBtn.style.backgroundColor = "transparent";
+        directionButtons.forEach(btn => {
+            btn.removeAttribute('disabled');
+            btn.style.cursor = 'pointer';
+        })
     }
 })
 
@@ -157,30 +164,31 @@ let sentence4 = 'Feel free to ';
 let link = 'Contact me !';
 
 
+
 function typePresentationText(text, index, container){
     if(index < text.length) {
-            let speed = Math.trunc(Math.random() * 250) + 50;
+            let speed = Math.trunc(Math.random() * 200) + 40;
             setTimeout(() => {
                 container.innerHTML += text[index];
                 typePresentationText(text, index + 1, container)
             }, speed);     
-        }   
+    }
 }
 
 
 function typePresentationSpan(text, index, container){
     if(index < text.length) {
-        let speed = Math.trunc(Math.random() * 250) + 50;
+        let speed = Math.trunc(Math.random() * 200) + 40;
         setTimeout(() => {
             container.innerHTML += `<span>${span[index]}</span>`;
             typePresentationSpan(text, index + 1, container)
-        }, speed)
+        }, speed);
     }
 }
 
 function typePresentationLink(text, index, container){
     if(index < text.length) {
-        let speed = Math.trunc(Math.random() * 250) + 40;
+        let speed = Math.trunc(Math.random() * 200) + 40;
         setTimeout(() => {
             container.innerHTML += `<a href='#'>${text[index]}</a>`;
             typePresentationLink(text, index + 1, container)
@@ -190,8 +198,10 @@ function typePresentationLink(text, index, container){
 
 
 setTimeout(() => {
-    typePresentationText(sentence1, 0, text1);
+    typePresentationText(sentence1, 0 , text1);
 }, 300);
+
+
 
 
 setTimeout(() => {
@@ -201,21 +211,23 @@ setTimeout(() => {
 
 const thirdType = setTimeout(() => {
     typePresentationText(sentence3, 0, text3);
-}, 12300);
+}, 10500);
 
 const spanType = setTimeout(() => {
     typePresentationSpan(span, 0 ,text3)
-}, 16000);
+}, 16250);
 
 
 
 const fourthType = setTimeout(() => {
     typePresentationText(sentence4, 0, text4);
-}, 18000);
+}, 18500);
 
 const linkType = setTimeout(() => {
     typePresentationLink(link, 0, text4);
+    projectBtn.removeAttribute('disabled');
 }, 21000);
+
 
 
 

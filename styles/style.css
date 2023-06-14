@@ -1,14 +1,18 @@
-/* ----------- VARIABLE ---------- */
+/* ----------------- VARIABLE ---------------- */
 
 :root {
     --main-bg-color: #BCEBCB;
     --text-color: #22031F;
     --main-violet:#9061F2;
     --main-orange: #F68E5F;
+    --typo-main-title: Monoton, sans-serif;
+    --type-second-title: Russo one, sans-serif;
+    --typo-nav: Righteous, sans-serif;
+    --typo-text: Chakra Petch, sans-serif;
 }
 
 
-/* ----------- GENERAL ---------- */
+/* ---------------- GENERAL --------------- */
 
 body{
     min-height: 100vh;
@@ -17,7 +21,7 @@ body{
 }
 
 
-/* ----------- HEADER ---------- */
+/* ---------------- HEADER --------------- */
 
 header {
     transition: opacity 1s;
@@ -43,6 +47,8 @@ header.headerIn {
 }
 
 .main_title {
+    font-family: var(--typo-main-title);
+    color: var(--text-color);
     text-align: center;
     font-size: 60px;
     padding: 20px;
@@ -60,6 +66,7 @@ header.headerIn {
 }
 
 .nav_link {
+    font-family: var(--typo-nav);
     display: block;
     font-size: 25px;
     text-decoration: none;
@@ -67,7 +74,7 @@ header.headerIn {
     font-weight: bolder;
 }
 
-/* ----------- MAIN ---------- */
+/* ---------------- MAIN --------------- */
 
 main {
     height: 100%;
@@ -80,7 +87,6 @@ main {
     min-height: 100%;
     margin: 0 auto;
     z-index: 1000;
-    
 }
 
 .presentation.animShrink {
@@ -93,8 +99,9 @@ main {
 }
 
 .presentation_txt {
-    width: 800px;
+    width: 900px;
     height: 250px;
+    font-family: var(--typo-text);
     margin: 0 auto;
 }
 
@@ -116,7 +123,7 @@ main {
 }
 
 .presentation_txt {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 56px;
     border: 3px solid var(--text-color);
     padding: 15px 25px;
@@ -173,12 +180,14 @@ main {
     display: block;
     margin: 25px auto;
     font-size: 36px;
-    background: var(--main-bg-color);
+    background: var(--main-violet);
     padding: 15px 25px;
     border: 3px solid var(--main-orange);
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 4px 5px 0 black;
+    font-family: var(--typo-nav);
+    font-weight: bolder;
 }
 
 .project_btn:hover {
@@ -192,7 +201,7 @@ main {
 }
 
 
-/* ----------- SLIDER ---------- */
+/* ---------------- SLIDER --------------- */
 
 
 .projects_slider{
@@ -246,16 +255,25 @@ main {
     align-items: center;
     border: 1px solid black;
     border-radius: 50%;
-    background: transparent;
+    background-color: var(--main-bg-color);
     cursor: pointer;
+}
+
+.toggle_info img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .toggle_info:hover {
     background: rgba(255,255,255,0.40);
+    border:2px solid var(--main-orange);
 }
 
 .slide_btn:hover {
     background: rgba(255,255,255,0.10);
+    border-color: var(--main-orange);
 }
 
 .slide_btn img {
@@ -263,14 +281,12 @@ main {
     pointer-events: none;
 }
 
-
 .left {
     left: 2%
 }
 
 .right {
     right: 2%;
-
 }
 
 .back_home {
@@ -279,19 +295,27 @@ main {
     position: absolute;
     font-size: 50px;
     z-index: 100;
-    top: 8%;
+    top: 10%;
     left: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
     border-radius: 50%;
-    background: transparent;
+    background: var(--main-bg-color);
     cursor: pointer;
+}
+
+.back_home img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .back_home:hover {
     background: rgba(255,255,255,0.10);
+    border: 2px solid var(--main-orange);
 }
 
 .slider_container picture img {
@@ -315,7 +339,7 @@ main {
 }
 
 .project_id {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.82);
     color: #fff;
     padding: 40px;
     display: flex;
@@ -336,9 +360,19 @@ main {
 
 .project_id h2 {
     font-size: 42px;
+    font-family: var(--type-second-title);
+    
+}
+
+.project_id h3{
+    font-size: 32px;
+    font-family: var(--type-second-title);
+    text-align: center;
 }
 .project_id p {
+    width: 80%;
     font-size: 26px;
+    font-family: var(--typo-text);
     text-align: center;
     margin-top: 25px;
 }
@@ -346,6 +380,7 @@ main {
 
 .img_techno_container img {
     width: 100px;
+    height: 100px;
     padding: 5px;
     margin-right: 15px;
     margin-top: 15px;

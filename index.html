@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/reset.css">        
         <link rel="stylesheet" href="styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Monoton&family=Righteous&family=Russo+One&display=swap" rel="stylesheet"> 
         <title>Devattom - PortFolio</title>
     </head>
     <body>
@@ -31,14 +34,14 @@
                     <p class="presentation_txt3"></p>
                     <p class="presentation_txt4"></p>
                 </div>
-                <button class="project_btn">Discover My Projects</button>
+                <button class="project_btn" >Discover My Projects</button>
             </section>
             <section class="projects_slider">
                 <div class="slider_container">
                     <button class="slide_btn left"><img src="images/icon_chevron_left.png" alt="icon de chevron"></button>
                     <button class="slide_btn right"><img src="images/icon_chevron_right.png" alt="icon de chevron"></button>
-                    <button class="back_home"><=</button>
-                    <button class="toggle_info">+</button>
+                    <button class="back_home"><img src="images/home.png" alt="icon home"></button>
+                    <button class="toggle_info"><img src="images/plus.png" alt="icone plus"></button>
                     <div class="slide slide1 active">
                         <picture>
                             <source srcset="images/bikeFinder/homepage_bikeFinder_w600.png" media="(max-width:599px)">
@@ -51,15 +54,16 @@
                             <h2>BikeFinder</h2>
                             <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
                             <div class="img_techno_container">
-                                <p>Technos :</p>
-                                <img src="images/logos/HTML5_Logo_128.png" alt="">
-                                <img src="images/logos/css.png" alt="">
-                                <img src="images/logos/angular.png" alt="">
+                                <h3>Technos :</h3>
+                                <img src="images/logos/HTML5_Logo_128.png" alt="logo html5">
+                                <img src="images/logos/css.png" alt="logo css3">
+                                <img src="images/logos/angular.png" alt="logo angular">
+                                <img src="images/logos/ts-logo-128.png" alt="logo typescript">
                             </div>
                             <div class="projects_link_container">
-                                <p>Link:</p>
-                                <img src="images/logos/github-logo.png" alt="">
-                                <img src="images/logos/link.png" alt="">
+                                <h3>Link:</h3>
+                                <a href="https://github.com/Devattom/Bike-Finder" target="_blank"><img src="images/logos/github-logo.png" alt="logo github"></a>
+                                <a href="https://bike-finder-20527.web.app/map" target="_blank"><img src="images/logos/link.png" alt="logo lien"></a>
                             </div>
                         </div>
                     </div>
@@ -67,22 +71,26 @@
                         <picture>
                             <source srcset="images/flight_handler/homepage_flight_handler_w600.jpg" media="(max-width:599px)">
                             <source srcset="images/flight_handler/homepage_flight_handler_w1200.jpg" media="(min-width:601px)">
-                            <source srcset="images/flight_handler/homepage_flight_handler_ooking" media="(max-width:1201px)">
-                            <img src="images/flight_handler/homepage_bikeFinder_w1900.png" alt="screenshot application BikeFinder">
+                            <source srcset="images/flight_handler/homepage_flight_handler_w1900" media="(max-width:1201px)">
+                            <img src="images/flight_handler/homepage_flight_handler_w1900" alt="screenshot application flight handler">
                         </picture>
                         <div class="project_id">
                             <h2>Flight Handler</h2>
-                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <p>This project was made with SYMFONY to learn how to do a simple application and use the basic features. It allow you to manage flight depends on your role level.
+                            To test admin features use credentials : test2@test.com / test123
+                            </p>
                             <div class="img_techno_container">
-                                <p>Technos :</p>
-                                <img src="images/logos/HTML5_Logo_128.png" alt="">
-                                <img src="images/logos/css.png" alt="">
-                                <img src="images/logos/angular.png" alt="">
+                                <h3>Technos :</h3>
+                                <img src="images/logos/HTML5_Logo_128.png" alt="logo html5">
+                                <img src="images/logos/css.png" alt="logo css3">
+                                <img src="images/logos/Bootstrap_logo.png" alt="logo boostrap">
+                                <img src="images/logos/new-php-logo.png" alt="logo php">
+                                <img src="images/logos/symfony_black_03.png" alt="logo symfony">
                             </div>
                             <div class="projects_link_container">
-                                <p>Link :</p>
-                                <img src="images/logos/github_black.png" alt="">
-                                <img src="images/logos/link.png" alt="">
+                                <h3>Link :</h3>
+                                <a href="https://github.com/Devattom/Bike-Finder" target="_blank"><img src="images/logos/github-logo.png" alt="logo github"></a>
+                                <a href="https://flight-handler.devattom.fr/" target="_blank"><img src="images/logos/link.png" alt="logo lien"></a>
                             </div>
                         </div>
                     </div>
@@ -95,17 +103,17 @@
                         </picture>
                         <div class="project_id">
                             <h2>Booking</h2>
-                            <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
+                            <p>This project was made for an exercice to learn class concept in PHP. It is simulate a booking website to get a room in an hotel. The program check if the room is free, and check the incoming data from the form, then save everything into a data base.</p>
                             <div class="img_techno_container">
-                                <p>Technos :</p>
-                                <img src="images/logos/HTML5_Logo_128.png" alt="">
-                                <img src="images/logos/css.png" alt="">
-                                <img src="images/logos/angular.png" alt="">
+                                <h3>Technos :</h3>
+                                <img src="images/logos/HTML5_Logo_128.png" alt="logo html5">
+                                <img src="images/logos/css.png" alt="logo css3">
+                                <img src="images/logos/new-php-logo.png" alt="logo php">
                             </div>
                             <div class="projects_link_container">
-                                <p>Link :</p>
-                                <img src="images/logos/github_black.png" alt="">
-                                <img src="images/logos/link.png" alt="">
+                                <h3>Link :</h3>
+                                <a href="https://github.com/Devattom/booking" target="_blank"><img src="images/logos/github-logo.png" alt="logo github"></a>
+                                <a href="https://booking.devattom.fr/" target="_blank"><img src="images/logos/link.png" alt="logo lien"></a>
                             </div>
                         </div>
                     </div>
@@ -120,15 +128,15 @@
                             <h2>Pokedex</h2>
                             <p>This project allow you to find the positions of the Velo Toulouse's stations. It implements also fake reservation features.</p>
                             <div class="img_techno_container">
-                                <p>Technos :</p>
+                                <h3>Technos :</h3>
                                 <img src="images/logos/HTML5_Logo_128.png" alt="">
                                 <img src="images/logos/css.png" alt="">
                                 <img src="images/logos/angular.png" alt="">
                             </div>
                             <div class="projects_link_container">
-                                <p>Link :</p>
-                                <img src="images/logos/github_black.png" alt="">
-                                <img src="images/logos/link.png" alt="">
+                                <h3>Link :</h3>
+                                <a href="https://github.com/Devattom/ng-pokemon-app" target="_blank"><img src="images/logos/github-logo.png" alt="logo github"></a>
+                                <a href="https://ng-pokemon-app-25895.web.app/login" target="_blank"><img src="images/logos/link.png" alt="logo lien"></a>
                             </div>
                         </div>
                     </div>
