@@ -57,7 +57,8 @@ header.headerIn {
 .nav_list {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    max-width: 1200px;
+    min-width: 350px;
     margin: 20px auto;
 }
 
@@ -98,12 +99,6 @@ main {
     animation: 1.5s ease-in growRotate;
 }
 
-.presentation_txt {
-    width: 900px;
-    height: 250px;
-    font-family: var(--typo-text);
-    margin: 0 auto;
-}
 
 .presentation_img{
     border: 5px solid var(--main-violet);
@@ -120,6 +115,10 @@ main {
 }
 
 .presentation_txt {
+    width: 900px;
+    height: auto;
+    font-family: var(--typo-text);
+    margin: 0 auto;
     font-size: 22px;
     line-height: 56px;
     border: 3px solid var(--text-color);
@@ -206,6 +205,62 @@ main {
 .project_btn:active{
     transform: translate(2px, 2px);
     box-shadow: 2px 2px black;
+}
+
+@media screen and (max-width : 1000px) {
+    .presentation_txt{
+        width: 650px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .presentation_txt span {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width : 750px) {
+    .presentation_txt{
+        width: 450px;
+        font-size: 16px;
+        line-height: 32px
+    }
+
+    .presentation_txt span {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width : 500px) {
+    .main_title{
+        font-size: 45px;
+    }
+
+    .nav_item {
+        margin-right: 5px;
+    }
+
+    .nav_link {
+        font-size: 18px;
+    }
+
+    .presentation_img{
+        width: 200px;
+        height: 200px;
+        margin: 35px auto;   
+    }
+    .presentation_txt{
+        width: 350px;
+        font-size: 16px;
+        line-height: 32px
+    }
+
+    .presentation_txt span {
+        font-size: 22px;
+    }
+
+    .project_btn {
+        font-size: 28px;
+        padding: 10px 20px;
+    }
 }
 
 
@@ -382,16 +437,25 @@ main {
     font-size: 26px;
     font-family: var(--typo-text);
     text-align: center;
-    margin-top: 25px;
 }
 
+.techno {
+    width: 60%;
+}
 
+.img_techno_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .img_techno_container img {
     width: 100px;
     height: 100px;
     padding: 5px;
-    margin-right: 15px;
-    margin-top: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -409,4 +473,108 @@ main {
 
 .projects_link_container img:hover {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 1200px) {
+    .slide_btn{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .project_id p{
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .img_techno_container img {
+        width: 70px;
+        height: 70px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .project_id p {
+        font-size: 20px;
+    }
+    .project_id h2 {
+        font-size: 35px;
+    }
+    .project_id h3 {
+        font-size: 25px;
+    }
+    .projects_link_container img {
+        width: 70px;
+        margin-right: 15px;
+    }
+
+    .slide_btn{
+        width: 50px;
+        height: 100%;
+        border-radius: 0;
+        top: 0;
+        bottom: 0;
+        transform: translate(0);
+        background-color: rgba(255, 255, 255, 0.18)
+    }
+
+    .left{
+        left: 0;
+    }
+    .right{
+        right: 0;
+    }
+    .back_home{
+        top: 8%;
+        left: 8%;
+    }
+
+    .toggle_info{
+        top: 8%;
+        right: 8%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project_id p {
+        font-size: 16px;
+    }
+    .project_id h2 {
+        font-size: 30px;
+    }
+    .project_id h3 {
+        font-size: 20px;
+    }
+    .img_techno_container img {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .slide_btn{
+        width: 40px;
+        height: 100%;
+        border-radius: 0;
+        top: 0;
+        bottom: 0;
+        transform: translate(0);
+        background-color: rgba(255, 255, 255, 0.18)
+    }
+
+    .left{
+        left: 0;
+    }
+    .right{
+        right: 0;
+    }
+    .back_home{
+        width: 40px;
+        height: 40px;
+        top: 4%;
+        left: 12%;
+    }
+
+    .toggle_info{
+        width: 40px;
+        height: 40px;
+        top: 4%;
+        right: 12%;
+    }
 }
