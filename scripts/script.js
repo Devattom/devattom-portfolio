@@ -153,45 +153,42 @@ const text2 = document.querySelector('.presentation_txt2');
 const text3 = document.querySelector('.presentation_txt3');
 const text4 = document.querySelector('.presentation_txt4');
 const spanContainer = document.querySelector('.span');
-const linkContainer = document.querySelector('.presentation_contact_link');
+const linkContainer = document.querySelector('.presentation_txt4 a');
 
 let sentence1 = 'Hi !';
 let sentence2 = 'My name is Thomas and I am an enthusiastic web developer.';
 let sentence3 = 'Here are some of my ';
-let span = 'Projects';
+let span = 'Projects.';
 let sentence4 = 'Feel free to ';
 let link = 'Contact me !';
 
-
+console.log(sentence4.length);
 
 function typePresentationText(text, index, container){
     if(index < text.length) {
-            let speed = Math.trunc(Math.random() * 200) + 40;
             setTimeout(() => {
                 container.innerHTML += text[index];
                 typePresentationText(text, index + 1, container)
-            }, speed);     
+            }, 100);     
     }
 }
 
 
 function typePresentationSpan(text, index, container){
     if(index < text.length) {
-        let speed = Math.trunc(Math.random() * 200) + 40;
         setTimeout(() => {
             container.innerHTML += `<span>${span[index]}</span>`;
             typePresentationSpan(text, index + 1, container)
-        }, speed);
+        }, 100);
     }
 }
 
 function typePresentationLink(text, index, container){
     if(index < text.length) {
-        let speed = Math.trunc(Math.random() * 200) + 40;
         setTimeout(() => {
             container.innerHTML += `<a href='#'>${text[index]}</a>`;
             typePresentationLink(text, index + 1, container)
-        }, speed)
+        }, 100)
     }
 }
 
@@ -205,27 +202,30 @@ setTimeout(() => {
 
 setTimeout(() => {
     typePresentationText(sentence2, 0, text2);
-}, 1500);
+}, 1050);
     
 
 const thirdType = setTimeout(() => {
     typePresentationText(sentence3, 0, text3);
-}, 10500);
+}, 7200);
 
 const spanType = setTimeout(() => {
     typePresentationSpan(span, 0 ,text3)
-}, 16250);
+}, 9400);
 
 
 
 const fourthType = setTimeout(() => {
     typePresentationText(sentence4, 0, text4);
-}, 18500);
+}, 10500);
 
 const linkType = setTimeout(() => {
-    typePresentationLink(link, 0, text4);
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = 'Contact me !';
+    text4.appendChild(link);
     projectBtn.removeAttribute('disabled');
-}, 21000);
+}, 12500);
 
 
 
