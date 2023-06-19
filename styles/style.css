@@ -11,7 +11,6 @@
     --typo-text: Chakra Petch, sans-serif;
 }
 
-
 /* ---------------- GENERAL --------------- */
 
 body{
@@ -20,60 +19,6 @@ body{
     color: var(--text-color);
 }
 
-
-/* ---------------- HEADER --------------- */
-
-header {
-    transition: opacity 1s;
-}
-
-header.transitionOut {
-    opacity: 0;
-}
-
-header.headerIn {
-    animation: 1.5s ease-in-out headerIn;
-}
-
-@keyframes headerIn {
-    0%{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.main_title {
-    font-family: var(--typo-main-title);
-    color: var(--text-color);
-    text-align: center;
-    font-size: 60px;
-    padding: 20px;
-}
-
-.nav_list {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1200px;
-    min-width: 350px;
-    margin: 20px auto;
-}
-
-.nav_item {
-    margin-right: 25px;
-}
-
-.nav_link {
-    font-family: var(--typo-nav);
-    display: block;
-    font-size: 25px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bolder;
-}
 
 /* ---------------- MAIN --------------- */
 
@@ -106,7 +51,32 @@ main {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 55px auto;   
+    margin: 35px auto;
+    box-shadow: 0 0 15px 2px var(--main-violet);
+    transition: transform 1.5s ease;
+}
+
+.presentation_img:hover {
+    transform: scale(1.1);
+    animation: shadow 5s ease-in-out infinite;
+}
+
+@keyframes shadow {
+    0%{
+        box-shadow: 0 0 15px 2px var(--main-violet);
+    }
+    25%{
+        box-shadow: 0 0 15px 5px var(--main-green);
+    }
+    50%{
+        box-shadow: 0 0 15px 2px var(--main-orange);
+    }
+    75%{
+        box-shadow: 0 0 15px 2px var(--main-violet);
+    }
+    100%{
+        box-shadow: 0 0 15px 2px var(--text-color);
+    }
 }
 
 .presentation_img img {
@@ -120,43 +90,52 @@ main {
     font-family: var(--typo-text);
     margin: 0 auto;
     font-size: 22px;
-    line-height: 56px;
+    line-height: 50px;
     border: 3px solid var(--text-color);
     padding: 15px 25px;
     border-radius: 15px;
 }
 
+.presentation_txt span::after{
+    content: "|";
+    display: inline-block;
+    margin-left: 2px;
+    animation: 0.8s ease infinite blink;
+}
+
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .presentation_txt span {
     font-weight: bold;
     font-style: oblique;
-    font-size: 30px;
+    font-size: 28px;
     text-decoration: underline;
 }
 
-.presentation_txt4 a {
+.presentation_txt a {
     color: var(--main-violet);
     margin-left: 4px;
     text-decoration: none;
     font-weight: bolder;
     font-style: italic;
-    transition: opacity 1s ease-out;
-    animation: 1.5s forwards appears;
 }
 
-.presentation_txt4 a:hover {
+.presentation_txt a:hover {
     color: var(--main-orange);
     letter-spacing: 5px;
     text-decoration: underline;
     text-underline-offset: 5px;
-}
-
-@keyframes appears {
-    0% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 
 @keyframes shrinkRotate {
@@ -181,11 +160,9 @@ main {
     }
 }
 
-
-
 .project_btn {
     display: block;
-    margin: 35px auto;
+    margin: 25px auto;
     font-size: 36px;
     background: var(--main-violet);
     padding: 15px 25px;
@@ -270,7 +247,6 @@ main {
 .projects_slider{
     display: none;
     grid-area: 1 / 1 / 2 / 2;
-    z-index: 0;
     min-height: 100%;
 }
 
@@ -327,10 +303,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
 .toggle_info:hover {
-    background: rgba(255,255,255,0.40);
     border:2px solid var(--main-orange);
 }
 
@@ -374,6 +350,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
 .back_home:hover {
@@ -513,7 +490,8 @@ main {
         top: 0;
         bottom: 0;
         transform: translate(0);
-        background-color: rgba(255, 255, 255, 0.18)
+        background: linear-gradient(to left, transparent 50%, rgba(255, 255, 255, 0.18));
+        /* background-color: rgba(255, 255, 255, 0.18); */
     }
 
     .left{

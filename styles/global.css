@@ -1,0 +1,72 @@
+/* ----------------- VARIABLE ---------------- */
+
+:root {
+    --main-green: #BCEBCB;
+    --text-color: #22031F;
+    --main-violet:#9061F2;
+    --main-orange: #F68E5F;
+    --typo-main-title: Monoton, sans-serif;
+    --type-second-title: Russo one, sans-serif;
+    --typo-nav: Righteous, sans-serif;
+    --typo-text: Chakra Petch, sans-serif;
+}
+
+
+
+/* ---------------- HEADER --------------- */
+
+header {
+    transition: opacity 1s;
+}
+
+header.transitionOut {
+    opacity: 0;
+}
+
+header.headerIn {
+    animation: 1.5s ease-in-out headerIn;
+}
+
+@keyframes headerIn {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.home_link {
+    text-decoration: none;
+}
+
+.main_title {
+    font-family: var(--typo-main-title);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    min-width: 350px;
+    margin: 20px auto;
+}
+
+.nav_item {
+    margin-right: 25px;
+}
+
+.nav_link {
+    font-family: var(--typo-nav);
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bolder;
+}
