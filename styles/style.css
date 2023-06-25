@@ -207,18 +207,6 @@ main {
     }
 }
 @media screen and (max-width : 500px) {
-    .main_title{
-        font-size: 45px;
-    }
-
-    .nav_item {
-        margin-right: 5px;
-    }
-
-    .nav_link {
-        font-size: 18px;
-    }
-
     .presentation_img{
         width: 200px;
         height: 200px;

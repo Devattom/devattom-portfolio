@@ -70,3 +70,20 @@ header.headerIn {
     color: var(--text-color);
     font-weight: bolder;
 }
+
+
+@media screen and (max-width : 550px) {
+    .main_title{
+        font-size: 45px;
+    }
+    .nav_list {
+        margin: 10px auto;
+    }
+    .nav_item {
+        margin-right: 5px;
+    }
+
+    .nav_link {
+        font-size: 18px;
+    }
+}

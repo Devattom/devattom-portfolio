@@ -1,4 +1,8 @@
 :root{
+    --main-green: #BCEBCB;
+    --text-color: #22031F;
+    --main-violet:#9061F2;
+    --main-orange: #F68E5F;
     --typo-main-title: Monoton, sans-serif;
     --type-second-title: Russo one, sans-serif;
     --typo-nav: Righteous, sans-serif;
@@ -26,8 +30,76 @@ main h2 {
 
 main p {
     font-size: 28px;
-    margin: 25px 0;
-    padding: 20px;
+    margin: 15px 0;
+    padding: 25px;
     font-family: var(--typo-text);
     line-height: 32px;
+}
+
+@media screen and (max-width:1500px) {
+    main{
+        width: 1000px;
+    }
+    main p {
+        font-size: 22px;
+        font-family: var(--typo-text);
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    main{
+        width: 700px;
+    }
+
+    main h2 {
+        font-size: 38px;
+    }
+    main p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    main{
+        width: 500px;
+        margin: 35px auto;
+    }
+
+    main h2 {
+        font-size: 32px;
+    }
+    .text_container {
+        margin-top: 25px;
+    }
+
+    main p {
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 15px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    main{
+        width: 350px;
+        margin: 30px auto;
+    }
+
+    main h2 {
+        font-size: 30px;
+    }
+    .text_container {
+        margin-top: 20px;
+    }
+
+    main p {
+        font-size: 18px;
+        padding: 10px;
+        line-height: 24px;
+    }
 }

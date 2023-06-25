@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/contact.style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Monoton&family=Righteous&family=Russo+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Monoton&family=Righteous&family=Russo+One&display=swap" rel="stylesheet">
     <title>Contact</title>
 </head>
 <body>
@@ -21,7 +21,34 @@
         </nav>
     </header>
     <main>
-        <p>Section en cours de construction 🏗️</p>
+        <h2>Contact.</h2>
+        <form action="formulaire.php" method="post">
+
+            <div class="input-group">
+                <label for="lastname">Last name :</label>
+                <input type="text" id="lastname" name="lastname">
+            </div>
+            
+            <div class="input-group">
+                <label for="firstname">First name :</label>
+                <input type="text" id="firstname" name="firstname">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email :</label>
+                <input type="mail" id="email" name="email">
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message :</label>
+                <textarea name="message" id="message" style="resize: none;"></textarea>
+            </div>
+
+            <button type="submit" class="submitBtn" name="submitBtn" value="send">Send It !</button>
+            <div class="failed"></div>
+                
+        </form>
     </main>
+    <script src="../scripts/form.js"></script>
 </body>
 </html>
