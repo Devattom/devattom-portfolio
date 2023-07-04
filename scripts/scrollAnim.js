@@ -2,10 +2,8 @@
 
 
 const elements = [
-    document.querySelector('.second_feature_txt'),
-    document.querySelector('.second_feature_img'),
-    document.querySelector('.third_feature_txt'),
-    document.querySelector('.third_feature_img'),
+    ...document.querySelectorAll('.features_txt'),
+    ...document.querySelectorAll('.features_img'),
     ...document.querySelectorAll('.links a'),
 ]
 
@@ -22,7 +20,3 @@ if (window.innerWidth > 750 ){
         })
     }
 }
-
-const source = document.querySelector('.overview source');
-
-console.log(source);
