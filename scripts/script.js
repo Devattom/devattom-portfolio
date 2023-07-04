@@ -80,6 +80,8 @@ const presentationSection = document.querySelector('.presentation');
 const sliderSection = document.querySelector('.projects_slider');
 const projectId = [...document.querySelectorAll('.project_id')];
 const presentationImg = document.querySelector('.presentation_img');
+const main = document.querySelector('main');
+
 
 
 projectBtn.addEventListener('click', () => {
@@ -93,6 +95,7 @@ projectBtn.addEventListener('click', () => {
     header.classList.remove('transitionIn');
     header.classList.add('transitionOut');
     setTimeout(()=> {
+        main.style.display = 'none';
         presentationSection.style.display = 'none';
         header.style.display = 'none';
     }, 1400);
@@ -101,6 +104,7 @@ projectBtn.addEventListener('click', () => {
         sliderSection.style.display = 'block';
         sliderSection.classList.toggle('animGrow');
     }, 1450);
+    
 });
 
 const backHomeBtn = document.querySelector('.back_home');
@@ -111,6 +115,7 @@ backHomeBtn.addEventListener('click', () => {
     header.classList.remove('transitionOut');
     sliderSection.classList.toggle('animShrink');
     setTimeout(()=> {
+        main.style.display = 'block';
         header.style.display = 'block';
         header.classList.add('headerIn');
         sliderSection.style.display = 'none';

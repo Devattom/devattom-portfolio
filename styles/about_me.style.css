@@ -42,7 +42,6 @@ main p {
     }
     main p {
         font-size: 22px;
-        font-family: var(--typo-text);
         line-height: 28px;
     }
 }
