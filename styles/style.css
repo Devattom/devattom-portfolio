@@ -11,13 +11,6 @@
     --typo-text: Chakra Petch, sans-serif;
 }
 
-/* ---------------- GENERAL --------------- */
-
-body{
-    min-height: 100vh;
-    background: #fff;
-    color: var(--text-color);
-}
 
 
 /* ---------------- MAIN --------------- */
@@ -295,6 +288,7 @@ main {
 }
 
 .toggle_info:hover {
+    background-color: #fff;
     border:2px solid var(--main-orange);
 }
 
@@ -342,7 +336,7 @@ main {
 }
 
 .back_home:hover {
-    background: rgba(255,255,255,0.10);
+    background: #fff;
     border: 2px solid var(--main-orange);
 }
 
@@ -473,29 +467,15 @@ main {
 
     .slide_btn{
         width: 50px;
-        height: 100%;
-        border-radius: 0;
-        top: 0;
-        bottom: 0;
-        transform: translate(0);
-        background: linear-gradient(to left, transparent 50%, rgba(255, 255, 255, 0.18));
-        /* background-color: rgba(255, 255, 255, 0.18); */
+        height: 50px;
     }
 
-    .left{
-        left: 0;
-    }
-    .right{
-        right: 0;
-    }
     .back_home{
         top: 8%;
-        left: 8%;
     }
 
     .toggle_info{
         top: 8%;
-        right: 8%;
     }
 }
 
@@ -514,33 +494,16 @@ main {
         height: 50px;
         padding: 5px;
     }
-    .slide_btn{
-        width: 40px;
-        height: 100%;
-        border-radius: 0;
-        top: 0;
-        bottom: 0;
-        transform: translate(0);
-        background-color: rgba(255, 255, 255, 0.18)
-    }
-
-    .left{
-        left: 0;
-    }
-    .right{
-        right: 0;
-    }
+    
     .back_home{
         width: 40px;
         height: 40px;
         top: 4%;
-        left: 12%;
     }
 
     .toggle_info{
         width: 40px;
         height: 40px;
         top: 4%;
-        right: 12%;
     }
 }

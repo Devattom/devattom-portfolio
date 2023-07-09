@@ -9,9 +9,13 @@
     --typo-text: Chakra Petch, sans-serif;
 }
 
+body{
+    position: relative;
+}
 
 .portfolio-container {
     display: flex;
+    
     flex-wrap: wrap;
     margin-top: 35px;
 }
@@ -85,7 +89,71 @@
     
 }
 
+@media screen and (max-width: 1100px) {
+    .portfolio-container{
+        justify-content: center;
+    }
+}
+
 /* ----------------------- DETAIL PAGES --------------------- */
+.btn-back{
+    position: relative;
+}
+
+.btn-back a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    display: block;
+    font-size: 20px;
+    color: var(--text-color);
+    font-family: var(--typo-nav);
+    text-align: center;
+    width: 250px;
+    margin: 55px auto 25px auto;
+    border: 3px solid var(--text-color);
+    border-radius: 50px;
+}
+.arrow_up{
+    position: absolute;
+    height: 40px;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.arrow_up.animate{
+    animation: arrowUp 1.2s infinite ease-in-out;
+}
+
+.btn-back a:hover {
+    border-color: var(--main-orange);
+}
+
+@keyframes arrowUp {
+    0%{
+        top: -35%;
+    }
+    50%{
+        top: -45%;
+    }
+    100%{
+        top:-35%;
+    }
+}
+
+.overview {
+    width: 100%;
+    padding: 25px;
+}
+
+.overview img {
+    width: 100%;
+    display: block;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+}
 
 .features {
     margin: 25px 0 35px 0;
@@ -100,17 +168,6 @@ h3 {
     box-shadow: 0 6px 12px -10px var(--main-orange);
 }
 
-.overview {
-    width: 100%;
-    padding: 25px;
-}
-
-.overview img {
-    width: 100%;
-    display: block;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-}
 .feature_container {
     display: flex;
     justify-content: space-evenly;
@@ -209,6 +266,32 @@ h3 {
     transition: all 0.4s ease;
 }
 
+.previous,.next{
+    position: absolute;
+    bottom: 0;
+    font-family: var(--typo-nav);
+    font-size: 22px;
+    color: #22031F;
+    text-decoration: none;
+}
+
+.previous:hover, .next:hover {
+    color: var(--main-orange);
+    transform: translateX(-5px);
+}
+.next:hover{
+    transform: translateX(5px);
+}
+
+.previous{
+    left: 55px
+}
+
+.next{
+    right: 55px;
+}
+
+
 @media screen and (max-width: 1500px) {
     .features_txt{
         width: 40%;
@@ -245,6 +328,19 @@ h3 {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .previous,.next{
+        bottom: -1%;
+    }
+    .previous{
+        left: 135px
+    }
+    
+    .next{
+        right: 135px;
+    }
+}
+
 @media screen and (max-width:750px) {
     .links a {
         padding: 15px;
@@ -273,6 +369,14 @@ h3 {
 
     .overview{
         padding: 0;
+    }
+
+    .previous{
+        left: 70px
+    }
+    
+    .next{
+        right: 70px;
     }
     
 }

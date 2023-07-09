@@ -20,3 +20,15 @@ if (window.innerWidth > 750 ){
         })
     }
 }
+
+const backBtn = document.querySelector('.btn-back');
+const arrow = document.querySelector('.arrow_up');
+
+backBtn.addEventListener('mouseenter', ()=> {
+    arrow.classList.add('animate')
+})
+
+backBtn.addEventListener('mouseleave', ()=> {
+    arrow.classList.remove('animate');
+})
+

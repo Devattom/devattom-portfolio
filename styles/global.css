@@ -10,6 +10,13 @@
     --typo-nav: Righteous, sans-serif;
     --typo-text: Chakra Petch, sans-serif;
 }
+/* ---------------- GENERAL --------------- */
+
+body{
+    min-height: 100vh;
+    background: #fff;
+    color: var(--text-color);
+}
 
 
 
@@ -43,11 +50,14 @@ header.headerIn {
 }
 
 .main_title {
+    text-align: center;
+    padding: 20px;
+}
+
+.home_link{
     font-family: var(--typo-main-title);
     color: var(--text-color);
-    text-align: center;
     font-size: 60px;
-    padding: 20px;
 }
 
 .nav_list {
@@ -130,7 +140,7 @@ main h2 {
 
 
 @media screen and (max-width : 550px) {
-    .main_title{
+    .home_link{
         font-size: 45px;
     }
     .nav_list {

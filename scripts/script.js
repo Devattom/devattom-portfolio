@@ -151,34 +151,25 @@ infoBtn.addEventListener('click', () => {
 })
 
 infoBtn.addEventListener('mouseenter', () => {
-    if(logoInfoBtn.src === window.location.origin + '/images/moins.png'){
-        infoBtn.style.backgroundColor = 'rgb(255,255,255)';
-    }else {
-        infoBtn.style.backgroundColor = 'rgba(255,255,255,0.10';
-    }
+    infoBtn.style.backgroundColor = '#fff';
 })
 infoBtn.addEventListener('mouseleave', () => {
     if(logoInfoBtn.src === window.location.origin + '/images/moins.png'){
-        
-        console.log('ok');
-        infoBtn.style.backgroundColor = "#F68E5F";
+        infoBtn.style.backgroundColor = "#F68E5F"; //orange
     } else {
-        infoBtn.style.backgroundColor = '#BCEBCB';
+        infoBtn.style.backgroundColor = '#BCEBCB'; //green
     }
 })
 
 
 const typedArea = document.querySelector('.presentation_txt span');
 const messages = ['Works', 'Ideas', 'Projects'];
-const typeSpeed = 150;
-
 
 function type(text, charIndex, arrIndex) {
     if(charIndex < text[arrIndex].length) {
         setTimeout(() => {
             typedArea.innerHTML += text[arrIndex].charAt(charIndex);
             type(text, charIndex + 1 , arrIndex);
-
         }, 200)
     } else {
         if(arrIndex === text.length - 1) return;
